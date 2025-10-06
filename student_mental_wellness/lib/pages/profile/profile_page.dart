@@ -4,6 +4,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import '../../providers/app_providers.dart';
 import '../../services/hive_service.dart';
 import '../../widgets/gradient_card.dart';
+import '../../widgets/avatar_selector.dart';
 
 class ProfilePage extends ConsumerStatefulWidget {
   const ProfilePage({super.key});
@@ -17,6 +18,7 @@ class _ProfilePageState extends ConsumerState<ProfilePage>
   late final TextEditingController _nameCtrl;
   late final TextEditingController _schoolCtrl;
   String? _avatarPath;
+  String? _selectedAvatar;
   late AnimationController _fadeController;
   late Animation<double> _fadeAnimation;
 
@@ -27,6 +29,7 @@ class _ProfilePageState extends ConsumerState<ProfilePage>
     _nameCtrl = TextEditingController(text: (box.get(HiveService.keyProfileName) as String?) ?? 'Anonymous Student');
     _schoolCtrl = TextEditingController(text: (box.get(HiveService.keyProfileSchool) as String?) ?? '');
     _avatarPath = box.get(HiveService.keyProfileAvatarPath) as String?;
+    _selectedAvatar = box.get('selected_avatar') as String?;
     
     _fadeController = AnimationController(
       duration: const Duration(milliseconds: 800),
@@ -50,6 +53,9 @@ class _ProfilePageState extends ConsumerState<ProfilePage>
     final box = Hive.box(HiveService.settingsBox);
     await box.put(HiveService.keyProfileName, _nameCtrl.text.trim());
     await box.put(HiveService.keyProfileSchool, _schoolCtrl.text.trim());
+    if (_selectedAvatar != null) {
+      await box.put('selected_avatar', _selectedAvatar);
+    }
     if (!mounted) return;
     
     // Show success feedback
@@ -138,17 +144,24 @@ class _ProfilePageState extends ConsumerState<ProfilePage>
                     width: 3,
                   ),
                 ),
-                child: _avatarPath != null 
-                    ? ClipOval(
-                        child: Image.asset(
-                          _avatarPath!,
-                          fit: BoxFit.cover,
+                child: _selectedAvatar != null
+                    ? Center(
+                        child: Text(
+                          _selectedAvatar!,
+                          style: const TextStyle(fontSize: 50),
                         ),
                       )
-                    : Icon(
-                        Icons.person_rounded,
-                        size: 50,
-                        color: Colors.white,
+                    : _avatarPath != null 
+                        ? ClipOval(
+                            child: Image.asset(
+                              _avatarPath!,
+                              fit: BoxFit.cover,
+                            ),
+                          )
+                        : Icon(
+                            Icons.person_rounded,
+                            size: 50,
+                            color: Colors.white,
                       ),
               ),
               Positioned(
@@ -236,6 +249,15 @@ class _ProfilePageState extends ConsumerState<ProfilePage>
               hintText: 'Enter your school or institution',
               prefixIcon: const Icon(Icons.school_rounded),
             ),
+          ),
+          const SizedBox(height: 24),
+          AvatarSelector(
+            selectedAvatar: _selectedAvatar,
+            onAvatarSelected: (avatar) {
+              setState(() {
+                _selectedAvatar = avatar;
+              });
+            },
           ),
           const SizedBox(height: 24),
           SizedBox(

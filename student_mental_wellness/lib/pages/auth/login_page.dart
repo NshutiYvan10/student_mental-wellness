@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../services/auth_service.dart';
+import '../../services/firebase_service.dart';
+import '../../models/user_profile.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -13,6 +15,20 @@ class _LoginPageState extends State<LoginPage> {
   final _emailCtrl = TextEditingController();
   final _passwordCtrl = TextEditingController();
   bool _loading = false;
+  UserRole? _selectedRole;
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Get selected role from arguments
+    final args = ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>?;
+    _selectedRole = args?['selectedRole'] as UserRole?;
+  }
 
   @override
   void dispose() {
@@ -24,17 +40,48 @@ class _LoginPageState extends State<LoginPage> {
   Future<void> _login() async {
     if (!_formKey.currentState!.validate()) return;
     setState(() => _loading = true);
+    
     try {
+      if (!FirebaseService.isInitialized) {
+        throw StateError('Firebase is not configured. Run FlutterFire and enable Email/Password auth.');
+      }
       await AuthService.signInWithEmail(_emailCtrl.text.trim(), _passwordCtrl.text.trim());
-    } catch (_) {
+      
       if (!mounted) return;
+      setState(() => _loading = false);
+      
+      // Navigate to dashboard after successful login
+      Navigator.pushReplacementNamed(context, '/dashboard');
+      
+    } catch (e) {
+      if (!mounted) return;
+      setState(() => _loading = false);
+      
+      // Show error message
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Login simulated (configure Firebase to enable real login).')),
+        SnackBar(
+          content: Text('Login failed: ${_friendlyError(e)}'),
+          backgroundColor: Colors.red,
+        ),
       );
     }
-    if (!mounted) return;
-    setState(() => _loading = false);
-    Navigator.pushReplacementNamed(context, '/dashboard');
+  }
+
+  String _friendlyError(Object e) {
+    final msg = e.toString();
+    if (msg.contains('invalid-credential') || msg.contains('wrong-password')) {
+      return 'Invalid email or password.';
+    }
+    if (msg.contains('user-not-found')) {
+      return 'No account found for that email.';
+    }
+    if (msg.contains('too-many-requests')) {
+      return 'Too many attempts. Please try again later.';
+    }
+    if (msg.contains('Firebase is not configured')) {
+      return 'App not connected to Firebase. See README to configure Firebase.';
+    }
+    return msg;
   }
 
   @override
@@ -68,7 +115,11 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               TextButton(
-                onPressed: () => Navigator.pushReplacementNamed(context, '/signup'),
+                onPressed: () => Navigator.pushReplacementNamed(
+                  context, 
+                  '/signup',
+                  arguments: {'selectedRole': _selectedRole},
+                ),
                 child: const Text('Create account'),
               ),
             ],

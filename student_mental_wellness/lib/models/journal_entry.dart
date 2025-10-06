@@ -11,6 +11,12 @@ class JournalEntry {
     required this.sentiment,
   });
 
+  // Alias for createdAt to match the expected field name
+  DateTime get timestamp => createdAt;
+  
+  // Alias for text to match the expected field name
+  String get content => text;
+
   Map<String, dynamic> toMap() => {
         'id': id,
         'createdAt': createdAt.toIso8601String(),

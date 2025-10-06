@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../providers/mood_theme_provider.dart';
 
-class GradientCard extends StatelessWidget {
+class GradientCard extends ConsumerWidget {
   final Widget child;
   final List<Color>? colors;
   final EdgeInsetsGeometry padding;
@@ -8,6 +10,7 @@ class GradientCard extends StatelessWidget {
   final bool isElevated;
   final VoidCallback? onTap;
   final Color? backgroundColor;
+  final bool useMoodTheme;
   
   const GradientCard({
     super.key,
@@ -18,18 +21,25 @@ class GradientCard extends StatelessWidget {
     this.isElevated = true,
     this.onTap,
     this.backgroundColor,
+    this.useMoodTheme = false,
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
     
+    List<Color>? gradientColors = colors;
+    if (gradientColors == null && useMoodTheme) {
+      final moodTheme = ref.watch(moodThemeProvider);
+      gradientColors = moodTheme.primaryGradient;
+    }
+    
     Widget card = Container(
       decoration: BoxDecoration(
-        gradient: colors != null 
+        gradient: gradientColors != null 
             ? LinearGradient(
-                colors: colors!,
+                colors: gradientColors,
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               )

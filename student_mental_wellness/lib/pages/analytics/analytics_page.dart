@@ -1,17 +1,20 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import '../../services/hive_service.dart';
+import '../../services/journal_analysis_service.dart';
 import '../../widgets/gradient_card.dart';
+import '../../widgets/word_cloud_widget.dart';
 
-class AnalyticsPage extends StatefulWidget {
+class AnalyticsPage extends ConsumerStatefulWidget {
   const AnalyticsPage({super.key});
 
   @override
-  State<AnalyticsPage> createState() => _AnalyticsPageState();
+  ConsumerState<AnalyticsPage> createState() => _AnalyticsPageState();
 }
 
-class _AnalyticsPageState extends State<AnalyticsPage> 
+class _AnalyticsPageState extends ConsumerState<AnalyticsPage> 
     with TickerProviderStateMixin {
   late AnimationController _fadeController;
   late Animation<double> _fadeAnimation;
@@ -82,6 +85,8 @@ class _AnalyticsPageState extends State<AnalyticsPage>
                 _buildMoodChart(theme, spots, filteredEntries),
                 const SizedBox(height: 24),
                 _buildInsights(theme, filteredEntries),
+                const SizedBox(height: 24),
+                _buildWordCloud(theme),
                 const SizedBox(height: 24),
                 _buildMoodDistribution(theme, filteredEntries),
               ]),
@@ -440,6 +445,78 @@ class _AnalyticsPageState extends State<AnalyticsPage>
               color: theme.colorScheme.onSurface,
               height: 1.5,
             ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildWordCloud(ThemeData theme) {
+    return GradientCard(
+      backgroundColor: theme.colorScheme.surface,
+      padding: const EdgeInsets.all(24),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Icon(
+                Icons.cloud_rounded,
+                color: theme.colorScheme.primary,
+                size: 24,
+              ),
+              const SizedBox(width: 12),
+              Text(
+                'Journal Word Cloud',
+                style: theme.textTheme.titleLarge?.copyWith(
+                  fontWeight: FontWeight.w700,
+                  color: theme.colorScheme.onSurface,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+          Text(
+            'Most frequently used words in your journal entries',
+            style: theme.textTheme.bodyMedium?.copyWith(
+              color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
+            ),
+          ),
+          const SizedBox(height: 16),
+          FutureBuilder<Map<String, int>>(
+            future: JournalAnalysisService.getTopWords(limit: 30),
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: Padding(
+                    padding: EdgeInsets.all(40),
+                    child: CircularProgressIndicator(),
+                  ),
+                );
+              }
+
+              if (snapshot.hasError) {
+                return Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(40),
+                    child: Text(
+                      'Error loading word cloud: ${snapshot.error}',
+                      style: theme.textTheme.bodyMedium?.copyWith(
+                        color: theme.colorScheme.error,
+                      ),
+                    ),
+                  ),
+                );
+              }
+
+              final wordFrequencies = snapshot.data ?? {};
+              return WordCloudWidget(
+                wordFrequencies: wordFrequencies,
+                maxWords: 30,
+                minFontSize: 12.0,
+                maxFontSize: 28.0,
+              );
+            },
           ),
         ],
       ),

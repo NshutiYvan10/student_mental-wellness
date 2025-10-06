@@ -59,4 +59,5 @@ class DefaultFirebaseOptions {
     projectId: 'student-wellness-app-34f4c',
     storageBucket: 'student-wellness-app-34f4c.firebasestorage.app',
   );
+
 }

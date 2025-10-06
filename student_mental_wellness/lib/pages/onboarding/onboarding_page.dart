@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../widgets/gradient_background.dart';
 import '../../widgets/gradient_card.dart';
+import '../../models/user_profile.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:lottie/lottie.dart';
 
@@ -48,6 +49,14 @@ class _OnboardingPageState extends State<OnboardingPage>
     _fadeController.dispose();
     _slideController.dispose();
     super.dispose();
+  }
+
+  void _navigateToAuth(UserRole role) {
+    Navigator.pushReplacementNamed(
+      context, 
+      '/login',
+      arguments: {'selectedRole': role},
+    );
   }
 
   @override
@@ -102,19 +111,19 @@ class _OnboardingPageState extends State<OnboardingPage>
                   child: Column(
                     children: [
                       _RoleCard(
-                        title: 'I\'m a Student',
-                        subtitle: 'Track moods, journal with AI insights, meditate, and connect with peers.',
-                        icon: Icons.school_rounded,
+                        title: UserRole.student.displayName,
+                        subtitle: UserRole.student.description,
+                        icon: UserRole.student.icon,
                         gradient: [theme.colorScheme.primary, theme.colorScheme.secondary],
-                        onTap: () => Navigator.pushReplacementNamed(context, '/login'),
+                        onTap: () => _navigateToAuth(UserRole.student),
                       ),
                       const SizedBox(height: 16),
                       _RoleCard(
-                        title: 'I\'m a Mentor',
-                        subtitle: 'Create support groups, share resources, and guide students on their wellness journey.',
-                        icon: Icons.volunteer_activism_rounded,
+                        title: UserRole.mentor.displayName,
+                        subtitle: UserRole.mentor.description,
+                        icon: UserRole.mentor.icon,
                         gradient: [theme.colorScheme.tertiary, theme.colorScheme.primary],
-                        onTap: () => Navigator.pushReplacementNamed(context, '/login'),
+                        onTap: () => _navigateToAuth(UserRole.mentor),
                       ),
                     ],
                   ),

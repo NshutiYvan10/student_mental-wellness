@@ -15,6 +15,8 @@ import '../pages/settings/settings_page.dart';
 import '../pages/groups/groups_page.dart';
 import '../pages/resources/resources_page.dart';
 import '../pages/home/home_shell.dart';
+import '../pages/messaging/messaging_hub_page.dart';
+import '../pages/messaging/chat_room_page.dart';
 
 class AppRouter {
   static const String initialRoute = '/onboarding';
@@ -51,6 +53,21 @@ class AppRouter {
         return _transition(const NotificationsPage());
       case '/settings':
         return _transition(const SettingsPage());
+      case '/messaging':
+        return _transition(const MessagingHubPage());
+      case '/chat-room':
+        final args = settings.arguments as Map<String, dynamic>?;
+        final chatRoom = args?['chatRoom'];
+        if (chatRoom != null) {
+          return _transition(ChatRoomPage(chatRoom: chatRoom));
+        }
+        return _transition(
+          Scaffold(
+            body: Center(
+              child: Text('Chat room not found'),
+            ),
+          ),
+        );
       default:
         return _transition(
           Scaffold(
