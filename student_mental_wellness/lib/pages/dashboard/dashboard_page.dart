@@ -149,7 +149,7 @@ class _DashboardPageState extends ConsumerState<DashboardPage>
               ),
               IconButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/mood');
+                  Navigator.pushNamed(context, '/mood/logger');
                 },
                 icon: const Icon(
                   Icons.add_circle_outline_rounded,
@@ -296,7 +296,7 @@ class _DashboardPageState extends ConsumerState<DashboardPage>
                 theme,
                 'Mood',
                 Icons.psychology_rounded,
-                () => Navigator.pushNamed(context, '/mood'),
+                () => Navigator.pushNamed(context, '/mood/logger'),
               ),
             ),
             const SizedBox(width: 12),

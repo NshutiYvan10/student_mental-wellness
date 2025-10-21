@@ -51,11 +51,10 @@ class _HomeShellState extends ConsumerState<HomeShell> {
           ProfilePage(),
         ];
       } else {
-        // Mentor pages
+        // Mentor pages (Groups removed as requested)
         _pages = const [
           DashboardPage(),
           MessagingHubPage(),
-          GroupsPage(),
           ResourcesPage(),
           ProfilePage(),
         ];
@@ -101,7 +100,6 @@ class _HomeShellState extends ConsumerState<HomeShell> {
       return const [
         NavigationDestination(icon: Icon(Icons.home_outlined), selectedIcon: Icon(Icons.home_rounded), label: 'Home'),
         NavigationDestination(icon: Icon(Icons.chat_bubble_outline), selectedIcon: Icon(Icons.chat_bubble_rounded), label: 'Messages'),
-        NavigationDestination(icon: Icon(Icons.groups_2_outlined), selectedIcon: Icon(Icons.groups_2_rounded), label: 'Groups'),
         NavigationDestination(icon: Icon(Icons.menu_book_outlined), selectedIcon: Icon(Icons.menu_book_rounded), label: 'Resources'),
         NavigationDestination(icon: Icon(Icons.person_outline), selectedIcon: Icon(Icons.person), label: 'Profile'),
       ];

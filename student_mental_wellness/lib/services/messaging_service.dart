@@ -25,11 +25,18 @@ class MessagingService {
     return _db
         .collection('chat_rooms')
         .where('memberIds', arrayContains: user.uid)
-        .orderBy('lastMessageAt', descending: true)
         .snapshots()
-        .map((snapshot) => snapshot.docs
-            .map((doc) => ChatRoom.fromMap({...doc.data(), 'id': doc.id}))
-            .toList());
+        .map((snapshot) {
+          final rooms = snapshot.docs
+              .map((doc) => ChatRoom.fromMap({...doc.data(), 'id': doc.id}))
+              .toList();
+          rooms.sort((a, b) {
+            final aTime = a.lastMessageAt ?? DateTime.fromMillisecondsSinceEpoch(0);
+            final bTime = b.lastMessageAt ?? DateTime.fromMillisecondsSinceEpoch(0);
+            return bTime.compareTo(aTime);
+          });
+          return rooms;
+        });
   }
 
   // Public Groups Discovery
@@ -42,12 +49,19 @@ class MessagingService {
         .collection('chat_rooms')
         .where('type', isEqualTo: ChatType.group.name)
         .where('isPrivate', isEqualTo: false)
-        .orderBy('lastMessageAt', descending: true)
         .limit(100)
         .snapshots()
-        .map((snapshot) => snapshot.docs
-            .map((doc) => ChatRoom.fromMap({...doc.data(), 'id': doc.id}))
-            .toList());
+        .map((snapshot) {
+          final groups = snapshot.docs
+              .map((doc) => ChatRoom.fromMap({...doc.data(), 'id': doc.id}))
+              .toList();
+          groups.sort((a, b) {
+            final aTime = a.lastMessageAt ?? DateTime.fromMillisecondsSinceEpoch(0);
+            final bTime = b.lastMessageAt ?? DateTime.fromMillisecondsSinceEpoch(0);
+            return bTime.compareTo(aTime);
+          });
+          return groups;
+        });
   }
 
   static Future<ChatRoom> createGroupChat({
@@ -450,11 +464,18 @@ class MessagingService {
         .collection('chat_requests')
         .where('targetUserId', isEqualTo: user.uid)
         .where('status', isEqualTo: ChatRequestStatus.pending.name)
-        .orderBy('createdAt', descending: true)
         .snapshots()
-        .map((snapshot) => snapshot.docs
-            .map((doc) => ChatRequest.fromMap({...doc.data(), 'id': doc.id}))
-            .toList());
+        .map((snapshot) {
+          final requests = snapshot.docs
+              .map((doc) => ChatRequest.fromMap({...doc.data(), 'id': doc.id}))
+              .toList();
+          requests.sort((a, b) {
+            final aTime = a.createdAt;
+            final bTime = b.createdAt;
+            return bTime.compareTo(aTime);
+          });
+          return requests;
+        });
   }
 
   static Future<void> respondToChatRequest({
