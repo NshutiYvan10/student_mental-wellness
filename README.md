@@ -454,77 +454,19 @@ DEBUG_MODE=false
 
 <div align="center">
 
-### 📱 Get the App Now
+![Download APK v1.0.0](https://img.shields.io/badge/🤖%20DOWNLOAD%20APK-v1.0.0-4CAF50?style=for-the-badge&logoColor=white&labelColor=2E7D32)
 
-<table>
-<tr>
-<td align="center" width="50%">
+### Scan to install:
 
-#### 🚀 Direct Download
-```
-┌─────────────────────────────────┐
-│  📱 ANDROID APK                 │
-│  ┌─────────────────────────────┐ │
-│  │  🧠✨ Student Mental       │ │
-│  │     Wellness               │ │
-│  │                            │ │
-│  │  🤖 AI-Powered             │ │
-│  │  💬 Real-time Chat         │ │
-│  │  📊 Analytics              │ │
-│  │  🧘 Meditation             │ │
-│  │                            │ │
-│  │  [🔽 DOWNLOAD v1.0.0]      │ │
-│  │                            │ │
-│  └─────────────────────────────┘ │
-│                                 │
-│  💾 Size: ~50MB                │
-│  🛡️  Secure & Verified         │
-│  ⚡ Latest Version             │
-└─────────────────────────────────┘
-```
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://github.com/yourusername/student-mental-wellness/releases/download/v1.0.0/student-mental-wellness-v1.0.0.apk" alt="QR Code for APK Download" width="200" height="200" style="border: 2px solid #ddd; border-radius: 8px;">
 
-**[📥 Download APK (v1.0.0)](https://github.com/yourusername/student-mental-wellness/releases/download/v1.0.0/student-mental-wellness-v1.0.0.apk)**
-
-*Click the link above to download directly to your device*
-
-</td>
-<td align="center" width="50%">
-
-#### 📲 Scan & Install
-
-```
-┌─────────────────────────┐
-│  📱 QR CODE DOWNLOAD    │
-│  ┌─────────────────────┐ │
-│  │ ████ ██ █ ██ ████ │ │
-│  │ █  █ ██ █ ██ █  █ │ │
-│  │ █ ██ ██ █ ██ ████ │ │
-│  │ ██ █ ██ █ ██ █ ██ │ │
-│  │ ████ ██ █ ██ ████ │ │
-│  │ █  █ ██ █ ██ █  █ │ │
-│  │ ████ ██ █ ██ ████ │ │
-│  └─────────────────────┘ │
-│                         │
-│  📷 Scan with Camera    │
-│  🔗 Instant Download    │
-│  📱 Mobile Friendly     │
-└─────────────────────────┘
-```
-
-**Scan the QR code above with your phone's camera**
-
-*Point your camera at the QR code to instantly open the download link*
-
-</td>
-</tr>
-</table>
+**Point your camera at the QR code above to download instantly**
 
 ---
 
 ### 📋 System Requirements
 
-<div align="center">
-<table>
+<table align="center">
 <tr>
 <td align="center" width="25%">
 <img src="https://img.shields.io/badge/Android-5.0+-green?style=for-the-badge&logo=android&logoColor=white" alt="Android Version"/>
@@ -548,36 +490,15 @@ DEBUG_MODE=false
 </td>
 </tr>
 </table>
-</div>
-
----
 
 ### 🔧 Installation Instructions
-
-<div align="center">
-
-```mermaid
-graph TD
-    A[📥 Download APK] --> B{🔒 Enable Unknown Sources}
-    B --> C[📂 Open Downloaded File]
-    C --> D[⚙️ Follow Installation Prompts]
-    D --> E[🔐 Grant App Permissions]
-    E --> F[🎉 Launch App & Enjoy!]
-    
-    style A fill:#4CAF50,stroke:#333,stroke-width:2px,color:#fff
-    style F fill:#FF9800,stroke:#333,stroke-width:2px,color:#fff
-```
-
-</div>
-
-#### Step-by-Step Guide:
 
 1. **📱 Enable Installation from Unknown Sources**
    - Go to Settings → Security → Install unknown apps
    - Allow your browser/file manager to install apps
 
 2. **📥 Download the APK File**
-   - Click the download link above or scan the QR code
+   - Click the download button above or scan the QR code
    - Wait for the download to complete
 
 3. **📂 Locate and Install**
