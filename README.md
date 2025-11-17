@@ -25,6 +25,20 @@ To create an accessible, stigma-free platform where students can prioritize thei
 
 ---
 
+## 🎥 Demo Video
+
+*[Demo video will be embedded here showcasing the complete app workflow from onboarding through daily usage, highlighting AI features, messaging capabilities, and wellness tracking]*
+
+**Demo Highlights:**
+- 🚀 Smooth onboarding experience with mood selection
+- 📊 Real-time mood tracking with AI insights
+- 🤖 Intelligent journal analysis with sentiment detection
+- 💬 Seamless mentor connection and group messaging
+- 🧘 Interactive meditation sessions with progress tracking
+- 📈 Comprehensive analytics dashboard with beautiful visualizations
+
+---
+
 ## ✨ Features
 
 ### 🤖 AI-Powered Mental Health Analytics
@@ -433,20 +447,6 @@ DEBUG_MODE=false
 - Unread badges are computed from per-user read state stored in `chat_rooms/{roomId}/read_states/{userId}`.
 - Typing indicators are published under `chat_rooms/{roomId}/typing/{userId}` with `isTyping` and `updatedAt`.
 - Pagination: messages are streamed with a limit (default 50) and older messages fetched in batches.
-
----
-
-## 🎥 Demo Video
-
-*[Demo video will be embedded here showcasing the complete app workflow from onboarding through daily usage, highlighting AI features, messaging capabilities, and wellness tracking]*
-
-**Demo Highlights:**
-- 🚀 Smooth onboarding experience with mood selection
-- 📊 Real-time mood tracking with AI insights
-- 🤖 Intelligent journal analysis with sentiment detection
-- 💬 Seamless mentor connection and group messaging
-- 🧘 Interactive meditation sessions with progress tracking
-- 📈 Comprehensive analytics dashboard with beautiful visualizations
 
 ---
 
