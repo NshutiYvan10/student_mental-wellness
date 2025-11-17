@@ -6,7 +6,7 @@
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 ![AI](https://img.shields.io/badge/AI_Powered-4285F4?style=for-the-badge&logo=google&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![License](https://img.shields.io/badge/License-All_Rights_Reserved-red?style=for-the-badge)
 
 *A comprehensive mental wellness platform designed specifically for students, combining AI-powered insights, peer support, and mindfulness practices in a beautiful, modern interface.*
 
@@ -517,50 +517,31 @@ flutter test --coverage
 
 ## 🤝 Contributing
 
-We welcome contributions from the community! See our [Contributing Guidelines](CONTRIBUTING.md) for details on:
-
-- 🐛 Bug reports and feature requests
-- 🔧 Code contributions and pull requests  
-- 📖 Documentation improvements
-- 🎨 Design and UX enhancements
-- 🧪 Testing and quality assurance
-
-### Development Workflow
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
+This project is currently not accepting external contributions as it was developed as part of an academic course and remains a personal project. However, feedback and suggestions are always welcome!
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is not open-source and is not available for public use, modification, or distribution. It was originally developed as part of an academic course, and I intend to continue expanding and improving it. All rights are exclusively owned by the project creator.
 
 ---
 
 ## 👥 Team & Acknowledgments
 
-### Core Development Team
-- **Lead Developer**: [Your Name] - Full-stack development and AI integration
-- **UI/UX Designer**: [Designer Name] - Design system and user experience
-- **Mental Health Consultant**: [Consultant Name] - Clinical guidance and content validation
+### Development Team
+- **Lead Developer & UI/UX Designer**: Single developer responsible for all aspects of the application - from concept and design to full-stack implementation and AI integration
 
-### Special Thanks
-- Mental health professionals who provided clinical guidance
-- Student beta testers who shaped the user experience
-- Open source contributors and the Flutter community
+### Acknowledgments
+Special thanks to my Mobile Programming instructor, Regis Safi, who introduced me to Flutter and showed me that everything is possible, and that everything eventually makes sense if you give it time.
 
 ---
 
 ## 📞 Support & Contact
 
 ### Get Help
-- 📧 **Email**: support@studentwellness.app
-- 💬 **Discord**: [Join our community](https://discord.gg/studentwellness)
-- 📱 **In-App Support**: Available 24/7 through the help section
-- 🌐 **Website**: [studentwellness.app](https://studentwellness.app)
+- 📧 **Email**: [Your Email Address]
+- 📱 **In-App Support**: Available through the help section for technical questions
 
 ### Crisis Resources
 If you're experiencing a mental health crisis, please reach out immediately:
