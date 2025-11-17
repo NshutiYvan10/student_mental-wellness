@@ -493,27 +493,33 @@ DEBUG_MODE=false
 
 ### 🔧 Installation Instructions
 
-1. **📱 Enable Installation from Unknown Sources**
-   - Go to Settings → Security → Install unknown apps
-   - Allow your browser/file manager to install apps
+<div align="center">
 
-2. **📥 Download the APK File**
-   - Click the download button above or scan the QR code
-   - Wait for the download to complete
+**Step-by-Step Guide:**
 
-3. **📂 Locate and Install**
-   - Open your Downloads folder or notification
-   - Tap the APK file to begin installation
+**1. 📱 Enable Installation from Unknown Sources**  
+Go to Settings → Security → Install unknown apps  
+Allow your browser/file manager to install apps
 
-4. **🔐 Grant Permissions**
-   - Allow notifications for mental health reminders
-   - Grant camera access for profile photos (optional)
-   - Enable internet access for real-time features
+**2. 📥 Download the APK File**  
+Click the download button above or scan the QR code  
+Wait for the download to complete
 
-5. **🎯 Start Your Wellness Journey**
-   - Create your account or sign in
-   - Complete the onboarding process
-   - Begin tracking your mental wellness!
+**3. 📂 Locate and Install**  
+Open your Downloads folder or notification  
+Tap the APK file to begin installation
+
+**4. 🔐 Grant Permissions**  
+Allow notifications for mental health reminders  
+Grant camera access for profile photos (optional)  
+Enable internet access for real-time features
+
+**5. 🎯 Start Your Wellness Journey**  
+Create your account or sign in  
+Complete the onboarding process  
+Begin tracking your mental wellness!
+
+</div>
 
 </div>
 
