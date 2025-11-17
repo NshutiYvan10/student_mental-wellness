@@ -452,21 +452,149 @@ DEBUG_MODE=false
 
 ## 📦 Download APK
 
-### Latest Release (v1.0.0)
-*[Download link will be inserted here]*
+<div align="center">
 
-### System Requirements
-- **Android**: 5.0+ (API level 21)
-- **Storage**: 100MB available space
-- **RAM**: 2GB minimum, 4GB recommended
-- **Network**: Internet connection required for real-time features
+### 📱 Get the App Now
 
-### Installation Instructions
-1. Download the APK file from the link above
-2. Enable "Install from Unknown Sources" in Android settings
-3. Open the downloaded APK file to begin installation
-4. Follow the on-screen instructions
-5. Grant necessary permissions when prompted
+<table>
+<tr>
+<td align="center" width="50%">
+
+#### 🚀 Direct Download
+```
+┌─────────────────────────────────┐
+│  📱 ANDROID APK                 │
+│  ┌─────────────────────────────┐ │
+│  │  🧠✨ Student Mental       │ │
+│  │     Wellness               │ │
+│  │                            │ │
+│  │  🤖 AI-Powered             │ │
+│  │  💬 Real-time Chat         │ │
+│  │  📊 Analytics              │ │
+│  │  🧘 Meditation             │ │
+│  │                            │ │
+│  │  [🔽 DOWNLOAD v1.0.0]      │ │
+│  │                            │ │
+│  └─────────────────────────────┘ │
+│                                 │
+│  💾 Size: ~50MB                │
+│  🛡️  Secure & Verified         │
+│  ⚡ Latest Version             │
+└─────────────────────────────────┘
+```
+
+**[📥 Download APK (v1.0.0)](https://github.com/yourusername/student-mental-wellness/releases/download/v1.0.0/student-mental-wellness-v1.0.0.apk)**
+
+*Click the link above to download directly to your device*
+
+</td>
+<td align="center" width="50%">
+
+#### 📲 Scan & Install
+
+```
+┌─────────────────────────┐
+│  📱 QR CODE DOWNLOAD    │
+│  ┌─────────────────────┐ │
+│  │ ████ ██ █ ██ ████ │ │
+│  │ █  █ ██ █ ██ █  █ │ │
+│  │ █ ██ ██ █ ██ ████ │ │
+│  │ ██ █ ██ █ ██ █ ██ │ │
+│  │ ████ ██ █ ██ ████ │ │
+│  │ █  █ ██ █ ██ █  █ │ │
+│  │ ████ ██ █ ██ ████ │ │
+│  └─────────────────────┘ │
+│                         │
+│  📷 Scan with Camera    │
+│  🔗 Instant Download    │
+│  📱 Mobile Friendly     │
+└─────────────────────────┘
+```
+
+**Scan the QR code above with your phone's camera**
+
+*Point your camera at the QR code to instantly open the download link*
+
+</td>
+</tr>
+</table>
+
+---
+
+### 📋 System Requirements
+
+<div align="center">
+<table>
+<tr>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/Android-5.0+-green?style=for-the-badge&logo=android&logoColor=white" alt="Android Version"/>
+<br><strong>Android 5.0+</strong>
+<br><small>(API Level 21)</small>
+</td>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/Storage-100MB-blue?style=for-the-badge&logo=harddisk&logoColor=white" alt="Storage"/>
+<br><strong>100MB Space</strong>
+<br><small>Available Storage</small>
+</td>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/RAM-2GB+-orange?style=for-the-badge&logo=memory&logoColor=white" alt="RAM"/>
+<br><strong>2GB+ RAM</strong>
+<br><small>4GB Recommended</small>
+</td>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/Internet-Required-red?style=for-the-badge&logo=wifi&logoColor=white" alt="Internet"/>
+<br><strong>Internet</strong>
+<br><small>For Real-time Features</small>
+</td>
+</tr>
+</table>
+</div>
+
+---
+
+### 🔧 Installation Instructions
+
+<div align="center">
+
+```mermaid
+graph TD
+    A[📥 Download APK] --> B{🔒 Enable Unknown Sources}
+    B --> C[📂 Open Downloaded File]
+    C --> D[⚙️ Follow Installation Prompts]
+    D --> E[🔐 Grant App Permissions]
+    E --> F[🎉 Launch App & Enjoy!]
+    
+    style A fill:#4CAF50,stroke:#333,stroke-width:2px,color:#fff
+    style F fill:#FF9800,stroke:#333,stroke-width:2px,color:#fff
+```
+
+</div>
+
+#### Step-by-Step Guide:
+
+1. **📱 Enable Installation from Unknown Sources**
+   - Go to Settings → Security → Install unknown apps
+   - Allow your browser/file manager to install apps
+
+2. **📥 Download the APK File**
+   - Click the download link above or scan the QR code
+   - Wait for the download to complete
+
+3. **📂 Locate and Install**
+   - Open your Downloads folder or notification
+   - Tap the APK file to begin installation
+
+4. **🔐 Grant Permissions**
+   - Allow notifications for mental health reminders
+   - Grant camera access for profile photos (optional)
+   - Enable internet access for real-time features
+
+5. **🎯 Start Your Wellness Journey**
+   - Create your account or sign in
+   - Complete the onboarding process
+   - Begin tracking your mental wellness!
+
+</div>
 
 ---
 
