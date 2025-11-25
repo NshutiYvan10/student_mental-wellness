@@ -27,7 +27,20 @@ To create an accessible, stigma-free platform where students can prioritize thei
 
 ## 🎥 Demo Video
 
-*[Demo video will be embedded here showcasing the complete app workflow from onboarding through daily usage, highlighting AI features, messaging capabilities, and wellness tracking]*
+<div align="center">
+
+<a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID">
+<img src="https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg" 
+     alt="Student Mental Wellness Demo Video" 
+     width="600" 
+     style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</a>
+
+**▶️ Click to watch the full demo video**
+
+*Complete app walkthrough showcasing AI features, messaging capabilities, and wellness tracking*
+
+</div>
 
 **Demo Highlights:**
 - 🚀 Smooth onboarding experience with mood selection
@@ -347,15 +360,54 @@ Our advanced theming system responds to user emotions and preferences:
 
 ## 📱 Screenshots
 
-*[Screenshots will be inserted here - Beautiful interface showcasing mood tracking, AI journal analysis, meditation timers, and peer messaging]*
+<div align="center">
 
-### Key Interface Highlights:
-- 🏠 **Dashboard**: Mood overview with AI insights and daily inspiration
-- 📊 **Analytics**: Comprehensive charts showing emotional patterns  
-- 🧘 **Meditation**: Interactive breathing guides with ambient animations
-- 💬 **Messaging**: Real-time chat with mentors and peer groups
-- 📝 **Journal**: AI-powered writing prompts and sentiment analysis
-- 🎯 **Resources**: Curated wellness content and mindfulness exercises
+### 📱 App Interface Showcase
+
+<table>
+<tr>
+<td align="center" width="33%">
+<img src="assets/screenshots/dashboard.png" alt="Dashboard" width="250" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<br><strong>🏠 Dashboard</strong>
+<br><small>Mood overview with AI insights and daily inspiration</small>
+</td>
+<td align="center" width="33%">
+<img src="assets/screenshots/mood-tracking.png" alt="Mood Tracking" width="250" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<br><strong>📊 Mood Tracking</strong>
+<br><small>Advanced 5-point mood logging with insights</small>
+</td>
+<td align="center" width="33%">
+<img src="assets/screenshots/journal.png" alt="AI Journal" width="250" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<br><strong>📝 AI Journal</strong>
+<br><small>Sentiment analysis & writing prompts</small>
+</td>
+</tr>
+<tr>
+<td align="center" width="33%">
+<img src="assets/screenshots/messaging.png" alt="Messaging" width="250" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<br><strong>� Messaging</strong>
+<br><small>Real-time chat with mentors and groups</small>
+</td>
+<td align="center" width="33%">
+<img src="assets/screenshots/meditation.png" alt="Meditation" width="250" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<br><strong>🧘 Meditation</strong>
+<br><small>Interactive breathing guides & timers</small>
+</td>
+<td align="center" width="33%">
+<img src="assets/screenshots/analytics.png" alt="Analytics" width="250" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<br><strong>📈 Analytics</strong>
+<br><small>Beautiful charts and progress visualization</small>
+</td>
+</tr>
+</table>
+
+### 🎨 Design Highlights
+- **Glassmorphism UI**: Premium backdrop blur effects throughout
+- **Adaptive Theming**: Mood-responsive color schemes
+- **Smooth Animations**: Lottie animations and custom transitions
+- **Material Design 3**: Modern components with accessibility features
+
+</div>
 
 ---
 
@@ -585,17 +637,17 @@ This project is not open-source and is not available for public use, modificatio
 ## 👥 Team & Acknowledgments
 
 ### Development Team
-- **Lead Developer & UI/UX Designer**: Single developer responsible for all aspects of the application - from concept and design to full-stack implementation and AI integration
+- **Lead Developer & UI/UX Designer**: Nshuti Ngabo Yvan: Single developer responsible for all aspects of the application - from concept and design to full-stack implementation and AI integration
 
 ### Acknowledgments
-Special thanks to my Mobile Programming instructor, Regis Safi, who introduced me to Flutter and showed me that everything is possible, and that everything eventually makes sense if you give it time.
+Special thanks to my Mobile Programming instructor, Regis Safi, for introducing me to Flutter and demonstrating that with patience and persistence, everything is possible and eventually makes sense.
 
 ---
 
 ## 📞 Support & Contact
 
 ### Get Help
-- 📧 **Email**: [Your Email Address]
+- 📧 **Email**: yvannshuti10@gmail.com
 - 📱 **In-App Support**: Available through the help section for technical questions
 
 ### Crisis Resources
